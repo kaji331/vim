@@ -1,0 +1,1 @@
+tagbar.vba: call delete('/home/kaji331/.vim/plugin/tagbar.vim')|call delete('/home/kaji331/.vim/syntax/tagbar.vim')|call delete('/home/kaji331/.vim/doc/tagbar.txt')

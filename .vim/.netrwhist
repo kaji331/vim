@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/kaji331/.vimlite/VimLite'
+let g:netrw_dirhist_2='/home/kaji331/.vimlite'
+let g:netrw_dirhist_3='/home/kaji331/.off_nvidia'
