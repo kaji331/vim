@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo 841229841229yl | sudo -S mount -t davfs https://www.box.com/dav /home/kaji331/Box.com 
+echo 841229841229yl | sudo -S vpn-connect

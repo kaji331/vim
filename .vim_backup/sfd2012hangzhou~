@@ -1,0 +1,58 @@
+typecho轻量的博客
+LotusPHP是PHP框架（插件式）
+
+
+ # spec file for package cdate
+ 
+ # THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER(S) ``AS IS'' AND ANY
+ # EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ # WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ # DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT HOLDER(S) BE LIABLE FOR ANY
+ # DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ # (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ # SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ # CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ # LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+ # DAMAGE.
+ 
+Name:				cdate
+Group:				utilities
+Version:			1.0.5
+Release:			1
+License:			None
+Url:				http://arpon.sourceforge.net/
+Source:				%{name}-%{version}.tar.gz
+BuildRequires:		cmake >= 2.6
+BuildRequires:		libdnet-devel
+BuildRequires:		libnet-devel
+BuildRequires:		libpcap-devel
+BuildRequires:		gcc-c++
+Requires:			libpcap1 >= 0.9.8
+Requires:			libnet1 >= 1.1.2.1
+Requires:			libdnet1 >= 1.11
+Requires:			libpth20
+# BuildArch:		noarch
+Summary:			Anti ARP attack 
+
+%description
+Andrea Di Pasquale aka "spikey" <spikey.it@gmail.com>
+
+%prep
+%setup -q
+
+%build
+mkdir build
+cd build
+cmake ..
+make
+
+%install
+cd build
+%make_install
+
+%files
+%defattr(-,root,root,-)
+%config /etc/arpon.sarpi
+/sbin/arpon
+%doc %{_mandir}/man8/arpon.8.gz

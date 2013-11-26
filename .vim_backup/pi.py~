@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+import gmpy
+
+#def factorial(x):
+#	result = gmpy.mpf(1)
+#	i = gmpy.mpf(2)
+#	while i <= x:
+#		result = result * i
+#		i = i + 1
+#	return result
+
+counter = 99
+j = 1
+add = 1
+data = gmpy.mpf(0)
+
+while j <= counter:
+	if add == 1:
+		data = data + gmpy.mpf(1)/gmpy.fac(j)
+	else:
+		data = data - gmpy.mpf(1)/gmpy.fac(j)
+	if add == 1:
+		add = 0
+	else:
+		add = 1
+	j = j + 2
+
+print(gmpy.mpf(4) * data)

@@ -1,0 +1,59 @@
+#include <iostream>
+#include <cstdlib>
+#include <vector>
+
+using namespace std;
+
+int main(int argc, char **argv)
+{
+	long counter = 1;
+	cout << "Please enter the cycle number: ";
+	cin >> counter;
+	long counter2 = counter;
+
+	if (counter < 1)
+	{
+		cout << "Wrong number!" << endl;
+		return EXIT_FAILURE;
+	}
+
+	long i = 1;
+	long double data_denominator = 1;
+	while (counter >= 1)
+	{
+		data_denominator *= i;
+		i += 2;
+		counter--;
+	}
+
+	i = 1;
+	vector<long double> data_numerator_vector;
+	while (counter2 >= 1)
+	{
+		data_numerator_vector.push_back(data_denominator / i);
+		i += 2;
+		counter2--;
+	}
+
+	counter = 1;
+	vector<long double>::iterator pos;
+	long double data_numerator = 0;
+	for (pos = data_numerator_vector.begin(); pos != data_numerator_vector.end(); pos++)
+		if (counter % 2)
+		{
+			data_numerator += *pos;
+			counter++;
+		}
+		else
+		{
+			data_numerator -= *pos;
+			counter++;
+		}
+
+	cout.setf(ios::fixed);
+	cout.setf(ios::showpoint);
+	cout.precision(16);
+	cout << "Pi is: " << 4 * data_numerator / data_denominator << endl;
+
+	return EXIT_SUCCESS;
+}

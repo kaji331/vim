@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Caledonia Plymouth Theme
+Description=A theme that is based on Caledonia KSplash
+ModuleName=script
+
+[script]
+ImageDir=/lib/plymouth/themes/caledonia/
+ScriptFile=/lib/plymouth/themes/caledonia/caledonia.script

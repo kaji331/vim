@@ -1,0 +1,8 @@
+#!/bin/bash
+
+sleep 30
+/sbin/rmmod nouveau
+modprobe bbswitch load_state=0 unload_state=1
+tee /proc/acpi/bbswitch <<<OFF
+
+exit 0

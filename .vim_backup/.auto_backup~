@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+a=`date +%w`
+
+if [ "$a" = "3" ];
+then
+	echo "Today, you will make a backup to server."
+	sleep 10
+	mount -t cifs //molmicrofoodsaf/f /home/kaji331/mount -o user=yangling,password=841229841229yl,workgroup=workgroup,ip=10.75.0.72
+	sleep 5
+	tar -cf /home/kaji331/mount/杨岭硬盘维修临时存放文件（请勿删除）/请勿删除，谢谢/debian-sid-kde-home-kaji331.tar --exclude=/home/kaji331/mount /home/kaji331
+	umount -t cifs /home/kaji331/mount
+else
+	echo "Today, you can have fun."
+	sleep 5
+fi

@@ -1,0 +1,8 @@
+#!/bin/bash 
+for i in `ls *.zip | cut -c51-120 | tr [:blank:] _`;do
+mkdir $i. 
+cd $i. 
+LANG=C 
+7z x ../$i 
+convmv -f gbk -t utf8 --notest -r .
+done

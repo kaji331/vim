@@ -1,0 +1,36 @@
+"3.2 (created: 2011/10/04 13:05:53)
+
+set runtimepath=/home/kaji331/.vimperator
+
+" vim: set ft=vimperator:
+
+" Mappings
+map A <Nop>
+map <C-o> <Nop>
+map <C-i> <Nop>
+map J <C-d>
+noremap K <C-u>
+map H gT
+map L gt
+noremap j 3j
+noremap k 3k
+noremap I <C-o>
+noremap O <C-i>
+noremap P <C-^>
+noremap <C-u> <C-v><C-u>
+noremap <C-s> <C-c>
+"noremap <C-c> <C-v><C-c>
+"noremap <C-a> <C-v><C-a>
+"cnoremap <C-c> <C-v><C-c>
+"cnoremap <C-v> <C-v><C-v>
+"cnoremap <C-x> <C-v><C-x>
+inoremap <C-a> <C-v><C-a>
+"inoremap <C-c> <C-v><C-c>
+"inoremap <C-v> <C-v><C-v>
+"inoremap <C-x> <C-v><C-x>
+inoremap <C-z> <C-v><C-z>
+inoremap <C-y> <C-v><C-y>
+
+" Options
+set gui=addons,nobookmarks,nomenu,nonavigation,tabs
+set defsearch=bing
